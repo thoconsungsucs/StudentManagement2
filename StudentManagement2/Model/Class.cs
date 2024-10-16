@@ -2,18 +2,16 @@
 {
     public class Class
     {
-        private static int LastId = 1;
-        public int ClassId { get; }
-        public required string ClassName { get; set; }
-        public required string Subject { get; set; }
-        public Teacher? Teacher { get; set; }
+        public virtual int ClassId { get; }
+        public virtual required string ClassName { get; set; }
+        public virtual required string Subject { get; set; }
+        public virtual Teacher? Teacher { get; set; }
 
         public Class()
         {
-            ClassId = LastId++;
         }
 
-        public void Show()
+        public virtual void Show()
         {
             Console.WriteLine("-----------------");
             Console.WriteLine("ClassId: " + ClassId);

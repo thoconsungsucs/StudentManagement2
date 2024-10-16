@@ -2,10 +2,10 @@
 {
     public class Student : Person
     {
-        public required string Address { get; set; }
-        public Class? Class { get; set; }
+        public virtual required string Address { get; set; }
+        public virtual Class? Class { get; set; }
 
-        public override void Show()
+        public virtual new void Show()
         {
             base.Show();
             Console.WriteLine("Address: " + Address);

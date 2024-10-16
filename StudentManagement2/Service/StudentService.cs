@@ -18,10 +18,6 @@ namespace StudentManagement2.Service
         public Student? GetStudentById(int studentId)
         {
             var student = _studentRepository.GetStudentById(studentId);
-            if (student == null)
-            {
-                Console.WriteLine("Student not found");
-            }
             return student;
         }
 

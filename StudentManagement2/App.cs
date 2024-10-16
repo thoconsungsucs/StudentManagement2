@@ -88,11 +88,13 @@ namespace StudentManagement2
             Console.Write("Enter student's name: ");
             var name = Console.ReadLine();
             Console.Write("Enter student's dob: ");
-            var dob = Console.ReadLine();
+            DateTime dob;
+            DateTime.TryParse(Console.ReadLine(), out dob);
             Console.Write("Enter student's address: ");
             var address = Console.ReadLine();
             Console.Write("Enter student's classId: ");
-            _classService.GetAllClasses().ForEach(c => c.Show());
+            var classes = _classService.GetAllClasses();
+            classes.ForEach(c => c.Show());
             Class? c = GetClass();
 
             var student = new Student
@@ -125,8 +127,10 @@ namespace StudentManagement2
             Console.Write("Enter student's name: ");
             student.Name = Console.ReadLine();
             Console.Write("Enter student's dob: ");
-            student.Dob = Console.ReadLine();
+            DateTime dob;
+            DateTime.TryParse(Console.ReadLine(), out dob);
             Console.Write("Enter student's address: ");
+            student.Dob = dob;
             student.Address = Console.ReadLine();
             Console.Write("Enter student's classId: ");
             _classService.GetAllClasses().ForEach(c => c.Show());

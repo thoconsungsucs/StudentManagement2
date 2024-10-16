@@ -1,7 +1,7 @@
 ﻿using StudentManagement2.Interface.IRepository;
 using StudentManagement2.Model;
 
-namespace StudentManagement2.Repository
+namespace StudentManagement2.InMemoryRepository
 {
     public class StudentRepository : IStudentRepository
     {

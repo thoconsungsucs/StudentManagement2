@@ -1,6 +1,6 @@
 ﻿using StudentManagement2.Interface.IRepository;
 using StudentManagement2.Model;
-namespace StudentManagement2.Repository
+namespace StudentManagement2.InMemoryRepository
 {
     public class ClassRepository : IClassRepository
 
@@ -11,7 +11,7 @@ namespace StudentManagement2.Repository
         {
             var teacher1 = new Teacher
             {
-                Dob = "01/01/1990",
+                Dob = DateTime.Parse("01/01/1990"),
                 Name = "Teacher 1",
             };
             classes.Add(new Class

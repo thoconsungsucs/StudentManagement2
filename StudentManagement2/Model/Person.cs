@@ -2,21 +2,19 @@
 {
     public class Person
     {
-        private static int LastId = 1;
-        public int Id { get; }
-        public required string Name { get; set; }
-        public required string Dob { get; set; }
+        public virtual int Id { get; }
+        public virtual required string Name { get; set; }
+        public virtual required DateTime Dob { get; set; }
 
         public Person()
         {
-            Id = LastId++;
         }
 
         public virtual void Show()
         {
             Console.WriteLine("Id: " + Id);
             Console.WriteLine("Name: " + Name);
-            Console.WriteLine("Dob: " + Dob);
+            Console.WriteLine("Dob: " + Dob.ToShortDateString());
         }
     }
 }
